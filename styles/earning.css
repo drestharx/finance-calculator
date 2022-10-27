@@ -1,0 +1,17 @@
+:root {
+    --black-blue: #102b44;
+    --light-blue: #03d8f5;
+    --blue-title: #098eb3;
+    --blue-border: #0d5677;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
