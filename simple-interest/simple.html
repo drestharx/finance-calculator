@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/simple.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap" rel="stylesheet">
+    <title>Interes Simple</title>
+</head>
+<body>
+    <header>
+        <h1>Interes Simple</h1>
+    </header>
+
+    <main>
+
+        <form class="form-container">
+
+            <label class="input-container" for="mount">
+                Monto
+                <input id="mount" type="number">
+                $
+            </label>
+
+            <label class="input-container" for="time">
+                Tiempo
+                <input id="time" type="number">
+                <select name="select-input" id="select-input">
+                    <option value="day">Dias</option>
+                    <option value="week">Semanas</option>
+                    <option value="month">Meses</option>
+                    <option value="year">Años</option>
+                </select>
+            </label>
+
+            <label class="input-container" for="interest">
+                Tasa de interes
+                <input id="interest" type="number">
+                % (anual)
+            </label>
+
+            <button class="btn">Calcular</button>
+
+        </form>
+
+        <span class="refresh-btn"></span>
+        
+        <section class="results">
+            <p class="first-p"></p>
+            <p class="second-p"></p>
+        </section>
+
+    </main>
+
+    <script src="./simple.js"></script>
+</body>
+</html>
