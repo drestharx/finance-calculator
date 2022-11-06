@@ -7,7 +7,6 @@ const rechargeButton = document.querySelector('.recharge-icon');
 const p1 = document.querySelector('.p-result1');
 const p2 = document.querySelector('.p-result2');
 
-
 function convertirTime() {
     let timeToUse;
     
@@ -57,9 +56,31 @@ function convertirInterest() {
 
 function calcCompound(event) {
     event.preventDefault();
-
+    
     const flujo = [];
     let interestPerPeriod;
+    
+    if(!mount.value && !timeLife.value) {
+        p1.innerText = 'Introduzca los valores faltantes';
+        return;
+    } else if (!mount.value && !interestRate.value) {
+        p1.innerText = 'Introduzca los valores faltantes';
+        return;
+    } else if (!timeLife.value && !interestRate.value) {
+        p1.innerText = 'Introduzca los valores faltantes';
+        return;
+    } else if (!mount.value) {
+        p1.innerText = 'Un valor presente es requerido';
+        return;
+    } else if (!timeLife.value) {
+        p1.innerText = 'Introduzca el tiempo a evaluar';
+        return;
+    } else if (!interestRate.value) {
+        p1.innerText = 'La tasa de interes es requerido';
+        return;
+    }
+
+
     const interes = convertirInterest();
     const tiempo = convertirTime();
 
