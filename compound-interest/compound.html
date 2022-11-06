@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/compound.css">
+    <title>Interes Compuesto</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Interes Compuesto</h1>
+    </header>
+
+    <main>
+
+        <form class="inputs-container">
+
+            <label for="mount">
+                Monto
+                <input id="mount" type="number">
+                $
+            </label>
+            
+            <label for="time-life">
+                Tiempo de vida
+                <input id="time-life" type="number">
+                años
+            </label>
+
+            <label for="periods">
+                Periodo de pagos
+                <select name="periods" id="periods">
+                    <option value="month1">Mensual</option>
+                    <option value="month3">Trimestral</option>
+                    <option value="month6">Semestral</option>
+                    <option value="year" selected>Anual</option>
+                </select>
+            </label>
+
+            <label for="interest-rate">
+                Tasa de Interes (anual)
+                <input id="interest-rate" type="number">
+                %
+            </label>
+
+            <button class="btn">Calcular</button>
+
+            <span class="recharge-icon"></span>
+
+        </form>
+
+        <p class="p-result1"></p>
+        <p class="p-result2"></p>
+    </main>
+
+    <script src="./compound.js"></script>
+
+</body>
+</html>
